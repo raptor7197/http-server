@@ -46,3 +46,18 @@ def main():
 if __name__ == "__main__":
     main()
 
+# how a http request looks like 
+# // Request line
+# GET                          // HTTP method
+# /index.html                  // Request target
+# HTTP/1.1                     // HTTP version
+# \r\n                         // CRLF that marks the end of the request line
+
+# // Headers
+# Host: localhost:4221\r\n     // Header that specifies the server's host and port
+# User-Agent: curl/7.64.1\r\n  // Header that describes the client's user agent
+# Accept: */*\r\n              // Header that specifies which media types the client can accept
+# \r\n                         // CRLF that marks the end of the headers  CRLF stands for Carriage Return Line Feed. It's a combination of two control characters (CR and LF) used to represent the end of a line in text files and various network protocols
+
+# // Request body (empty)
+
