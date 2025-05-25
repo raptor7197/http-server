@@ -1,9 +1,6 @@
 import socket  # noqa: F401
 
 def main():
-    # You can use print statements as follows for debugging, they'll be visible when running tests.
-    print("Logs from your program will appear here!")
-    # Uncomment this to pass the first stage
     server_socket = socket.create_server(("localhost", 4221), reuse_port=True)
     client_socket, addr = server_socket.accept()  # wait for client
     with client_socket:
@@ -17,6 +14,7 @@ def main():
             response = "HTTP/1.1 404 Not Found\r\n\r\n"
         client_socket.sendall(response.encode())
         client_socket.close()
-
+# curl -v http://localhost:4221/abcdefg
+# make the above request in a terminal to test the server
 if __name__ == "__main__":
     main()
